@@ -1,0 +1,11 @@
+---
+- hosts: pe1, pe2
+  gather_facts: false
+  connection: local
+
+  tasks:
+    # - name: Build config template files local
+    #   template: src=./templates/l2vpn.j2 dest=./final_configs/add-services-{{ inventory_hostname }}.cfg
+    - name: Provision L3VPN Services
+      cisco.ios.ios_config:
+        src: 'templates/l2vpn.j2'
