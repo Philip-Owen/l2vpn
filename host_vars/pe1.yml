@@ -1,3 +1,4 @@
 ---
+interface: FastEthernet1/0
 vlanId: 999
 peer: pe2
